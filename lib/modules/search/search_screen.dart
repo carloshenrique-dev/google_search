@@ -22,10 +22,10 @@ class _SearchScreenState extends State<SearchScreen> {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => widget.controller,
-      child: SafeArea(
-        child: Scaffold(
-          backgroundColor: Colors.white,
-          body: Padding(
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        body: SafeArea(
+          child: Padding(
             padding: const EdgeInsets.all(16),
             child: ListView(
               physics: const BouncingScrollPhysics(),

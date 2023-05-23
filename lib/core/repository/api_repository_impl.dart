@@ -10,7 +10,7 @@ class ApiRepositoryImpl implements ApiRepository {
       {http.Client? client}) async {
     try {
       final httpClient = client ?? http.Client();
-      final url = Uri.parse('http://172.24.80.1:8080/search/$query');
+      final url = Uri.parse('http://seu_ip/search/$query');
       final request = http.Request('GET', url);
       const timeout = Duration(seconds: 5);
 

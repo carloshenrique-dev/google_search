@@ -8,18 +8,15 @@ import 'api_service_impl.dart';
 
 final di = GetIt.instance;
 
-initServiceLocator() {
-  di.registerLazySingleton<ApiRepository>(
+Future<void> initServiceLocator() async {
+  di.registerFactory<ApiRepository>(
     () => ApiRepositoryImpl(),
   );
 
-  di.registerLazySingleton<ApiService>(
-    () => ApiServiceImpl(
-      apiRepository: di<ApiRepository>(),
-    ),
-  );
+  di.registerFactory<ApiService>(
+      () => ApiServiceImpl(apiRepository: di<ApiRepository>()));
 
-  di.registerLazySingleton<SearchCubit>(
+  di.registerFactory<SearchCubit>(
     () => SearchCubit(
       apiService: di<ApiService>(),
     ),
