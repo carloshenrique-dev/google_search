@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_search/core/models/google_search_model.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class CardWidget extends StatelessWidget {
   final GoogleSearchModel googleSearchModel;
@@ -35,10 +36,10 @@ class CardWidget extends StatelessWidget {
               padding: EdgeInsets.zero,
             ),
             onPressed: () async {
-              //final url = Uri.parse(googleSearchModel.link);
-              //if (await canLaunchUrl(url)) {
-              //  await launchUrl(url);
-              //}
+              final url = Uri.parse(googleSearchModel.link);
+              if (await canLaunchUrl(url)) {
+                await launchUrl(url);
+              }
             },
             child: const Text('Visitar link'),
           ),
