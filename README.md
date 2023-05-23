@@ -4,6 +4,21 @@ A new Flutter project.
 
 ## Getting Started
 
+OBS: O projeto esta na versao mais recente do flutter:
+
+```
+  Doctor summary (to see all details, run flutter doctor -v):
+  [✓] Flutter (Channel stable, 3.10.1, on macOS 13.3.1 22E772610a darwin-x64,
+    locale pt-BR)
+  [✓] Android toolchain - develop for Android devices (Android SDK version 33.0.2)
+  [✓] Xcode - develop for iOS and macOS (Xcode 14.3)
+  [✓] Chrome - develop for the web
+  [✓] Android Studio (version 2022.2)
+  [✓] VS Code (version 1.74.3)
+  [✓] Connected device (3 available)
+  [✓] Network resources
+```
+
 Este projeto foi realizado de forma a consumir dados em uma pesquisa do google e mostra-los em um app.
 
 Foi criado uma API em dart utilizando Shelf para auxiliar no processo, que esta no seguinte repositorio: 
