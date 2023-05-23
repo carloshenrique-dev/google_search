@@ -14,10 +14,14 @@ Para executar o projeto corretamente vc deve clonar o repositorio acima e execut
 Apos isso, vc deve clonar este repositorio, rodar o comando flutter pub get para o seu editor de codigo conseguir pegar todos as informacoes do projeto
 e os packages utilizados para executar corretamente.
 Feito isso, vc deve ir para o arquivo: 
-  - ApiRepositoryImpl e alterar a seguinte linha: 
+  - api_repository_impl e alterar a seguinte linha: 
     - final url = Uri.parse('http://seu_ip:8080/search/$query');
     - Onde seu_ip deve ser substituido pelo seu ip :) (se estiver no windows basta usar o comando ipconfig no terminal e pegar o endereco de ipv4 e caso esteja no mac, ifconfig ou pegue nos ajustes na conexao de rede em que esta usando)
     - feito isso vc pode executar o projeto e realizar qualquer busca :) 
+    
+    - api_repository_test e alterar a seguinte linha: 
+      - 'http://seu_ip:8080/search/query') 
+      - e adicione seu ip tambem para que os testes funcionem corretamente, lembre-se a api deve estar rodando :)
 
 OBS: Nao existe paginacao feita neste projeto devido a ser uma implementacao simples, entao vera em torno de 10 resultados para sua pesquisa na tela.
 
