@@ -13,7 +13,7 @@ void main() {
       mockClient = MockClient((request) async {
         // Simulate the API response
         if (request.url.toString() ==
-            'http://192.168.68.103:8080/search/query') {
+            'http://seu_ip:8080/search/query') {
           final responseBody = {
             'items': [
               {'title': 'Result 1', 'link': 'https://example.com/result1'},
